@@ -236,24 +236,13 @@ The following glyphs do not have the recommended number of contours:
  - Glyph name: A	Contours detected: 0	Expected: 2
  - Glyph name: B	Contours detected: 0	Expected: 2 or 3
  - Glyph name: C	Contours detected: 0	Expected: 1
- - Glyph name: F	Contours detected: 0	Expected: 1
- - Glyph name: H	Contours detected: 0	Expected: 1
- - Glyph name: I	Contours detected: 0	Expected: 1
- - Glyph name: J	Contours detected: 0	Expected: 1
  - Glyph name: K	Contours detected: 0	Expected: 1 or 2
- - Glyph name: L	Contours detected: 0	Expected: 1
  - Glyph name: M	Contours detected: 0	Expected: 1
  - Glyph name: O	Contours detected: 0	Expected: 2
- - Glyph name: P	Contours detected: 0	Expected: 1 or 2
  - Glyph name: Q	Contours detected: 0	Expected: 2
  - Glyph name: S	Contours detected: 0	Expected: 1
- - Glyph name: T	Contours detected: 0	Expected: 1
- - Glyph name: U	Contours detected: 0	Expected: 1
  - Glyph name: V	Contours detected: 0	Expected: 1
  - Glyph name: W	Contours detected: 0	Expected: 1 or 2
- - Glyph name: X	Contours detected: 0	Expected: 1
- - Glyph name: Y	Contours detected: 0	Expected: 1
- - Glyph name: Z	Contours detected: 0	Expected: 1
  - Glyph name: a	Contours detected: 0	Expected: 2
  - Glyph name: b	Contours detected: 0	Expected: 2
  - Glyph name: c	Contours detected: 0	Expected: 1
@@ -283,24 +272,13 @@ The following glyphs do not have the recommended number of contours:
  - Glyph name: A	Contours detected: 0	Expected: 2
  - Glyph name: B	Contours detected: 0	Expected: 2 or 3
  - Glyph name: C	Contours detected: 0	Expected: 1
- - Glyph name: F	Contours detected: 0	Expected: 1
- - Glyph name: H	Contours detected: 0	Expected: 1
- - Glyph name: I	Contours detected: 0	Expected: 1
- - Glyph name: J	Contours detected: 0	Expected: 1
  - Glyph name: K	Contours detected: 0	Expected: 1 or 2
- - Glyph name: L	Contours detected: 0	Expected: 1
  - Glyph name: M	Contours detected: 0	Expected: 1
  - Glyph name: O	Contours detected: 0	Expected: 2
- - Glyph name: P	Contours detected: 0	Expected: 1 or 2
  - Glyph name: Q	Contours detected: 0	Expected: 2
  - Glyph name: S	Contours detected: 0	Expected: 1
- - Glyph name: T	Contours detected: 0	Expected: 1
- - Glyph name: U	Contours detected: 0	Expected: 1
  - Glyph name: V	Contours detected: 0	Expected: 1
  - Glyph name: W	Contours detected: 0	Expected: 1 or 2
- - Glyph name: X	Contours detected: 0	Expected: 1
- - Glyph name: Y	Contours detected: 0	Expected: 1
- - Glyph name: Z	Contours detected: 0	Expected: 1
  - Glyph name: a	Contours detected: 0	Expected: 2
  - Glyph name: b	Contours detected: 0	Expected: 2
  - Glyph name: c	Contours detected: 0	Expected: 1
@@ -354,7 +332,12 @@ generate significant numbers of false positives, it will pass if there are more
 than 100 reported misalignments.</pre>
 
 * ⚠ **WARN** The following glyphs have on-curve points which have potentially incorrect y coordinates:
-	* G (U+0047): X=294.0,Y=-1.5 (should be at baseline 0?) [code: found-misalignments]
+	* G (U+0047): X=294.0,Y=-1.5 (should be at baseline 0?)
+	* H (U+0048): X=58.0,Y=-1.0 (should be at baseline 0?)
+	* I (U+0049): X=58.0,Y=-1.0 (should be at baseline 0?)
+	* J (U+004A): X=54.0,Y=-1.0 (should be at baseline 0?)
+	* X (U+0058): X=70.0,Y=-1.0 (should be at baseline 0?)
+	* X (U+0058): X=129.0,Y=-1.0 (should be at baseline 0?) and Y (U+0059): X=190.0,Y=-1.0 (should be at baseline 0?) [code: found-misalignments]
 
 </details>
 <details>
@@ -370,7 +353,15 @@ positives, it will pass if there are more than 100 reported short segments.</pre
 
 * ⚠ **WARN** The following glyphs have segments which seem very short:
 	* G (U+0047) contains a short segment B<<376.0,42.0>-<368.0,42.0>-<358.5,35.5>>
-	* N (U+004E) contains a short segment B<<196.0,306.0>-<191.0,306.0>-<187.0,302.0>> and N (U+004E) contains a short segment B<<187.0,302.0>-<183.0,298.0>-<183.0,286.0>> [code: found-short-segments]
+	* N (U+004E) contains a short segment B<<196.0,306.0>-<191.0,306.0>-<187.0,302.0>>
+	* N (U+004E) contains a short segment B<<187.0,302.0>-<183.0,298.0>-<183.0,286.0>>
+	* X (U+0058) contains a short segment B<<222.0,515.0>-<224.0,511.0>-<227.5,506.0>>
+	* X (U+0058) contains a short segment B<<227.5,506.0>-<231.0,501.0>-<236.0,501.0>>
+	* X (U+0058) contains a short segment B<<236.0,501.0>-<240.0,501.0>-<242.5,506.0>>
+	* X (U+0058) contains a short segment B<<242.5,506.0>-<245.0,511.0>-<246.0,516.0>>
+	* X (U+0058) contains a short segment B<<256.0,243.0>-<250.0,247.0>-<243.5,253.5>>
+	* X (U+0058) contains a short segment B<<243.5,253.5>-<237.0,260.0>-<231.0,259.0>>
+	* X (U+0058) contains a short segment B<<231.0,259.0>-<225.0,258.0>-<222.0,252.0>> and 7 more. [code: found-short-segments]
 
 </details>
 <br>
