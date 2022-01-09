@@ -1,4 +1,5 @@
 *~
+*_backups
 venv
 build.stamp
 proof

@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>com.schriftgestaltung.disablesAutomaticAlignment</key>
-	<false/>
+	<false />
 	<key>com.schriftgestaltung.fontMasterID</key>
 	<string>m01</string>
 	<key>com.schriftgestaltung.glyphOrder</key>
-	<false/>
+	<false />
 	<key>com.schriftgestaltung.useNiceNames</key>
-	<true/>
+	<true />
 	<key>public.glyphOrder</key>
 	<array>
 		<string>A</string>
