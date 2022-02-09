@@ -3,7 +3,7 @@
 Fontbakery version: 0.8.4
 
 <details>
-<summary><b>[15] PrintShoppe.ttf</b></summary>
+<summary><b>[14] PrintShoppe.ttf</b></summary>
 <details>
 <summary>🔥 <b>FAIL:</b> Checking file is named canonically.</summary>
 
@@ -48,18 +48,6 @@ Google Fonts expects that fonts in its collection support at least the minimal
 set of characters defined in the `GF-latin-core` glyph-set.</pre>
 
 * 🔥 **FAIL** Missing required codepoints: 0x0021 (EXCLAMATION MARK), 0x0022 (QUOTATION MARK), 0x0023 (NUMBER SIGN), 0x0024 (DOLLAR SIGN) and 156 more. [code: missing-codepoints]
-
-</details>
-<details>
-<summary>🔥 <b>FAIL:</b> Check license file has good copyright string.</summary>
-
-* [com.google.fonts/check/license/OFL_copyright](https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/googlefonts.html#com.google.fonts/check/license/OFL_copyright)
-<pre>--- Rationale ---
-An OFL.txt file&#x27;s first line should be the font copyright e.g:
-&quot;Copyright 2019 The Montserrat Project Authors
-(https://github.com/julietaula/montserrat)&quot;</pre>
-
-* 🔥 **FAIL** First line in license file does not match expected format: "copyright 20** the my font project authors (https://github.com/googlefonts/my-font-repository)"
 
 </details>
 <details>
@@ -371,8 +359,8 @@ positives, it will pass if there are more than 100 reported short segments.</pre
 
 | 💔 ERROR | 🔥 FAIL | ⚠ WARN | 💤 SKIP | ℹ INFO | 🍞 PASS | 🔎 DEBUG |
 |:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
-| 0 | 8 | 7 | 122 | 7 | 76 | 0 |
-| 0% | 4% | 3% | 55% | 3% | 35% | 0% |
+| 0 | 7 | 7 | 122 | 7 | 77 | 0 |
+| 0% | 3% | 3% | 55% | 3% | 35% | 0% |
 
 **Note:** The following loglevels were omitted in this report:
 * **SKIP**
