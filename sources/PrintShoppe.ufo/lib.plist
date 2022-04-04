@@ -3,20 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>com.schriftgestaltung.disablesAutomaticAlignment</key>
-	<false />
+	<false/>
 	<key>com.schriftgestaltung.fontMasterID</key>
 	<string>m01</string>
 	<key>com.schriftgestaltung.glyphOrder</key>
-	<false />
+	<false/>
 	<key>com.schriftgestaltung.useNiceNames</key>
-	<true />
+	<true/>
+	<key>com.schriftgestaltung.weightValue</key>
+	<integer>100</integer>
 	<key>public.glyphOrder</key>
 	<array>
 		<string>A</string>
+		<string>Aacute</string>
+		<string>Acircumflex</string>
+		<string>Adieresis</string>
+		<string>Agrave</string>
+		<string>Aring</string>
+		<string>Atilde</string>
 		<string>B</string>
 		<string>C</string>
 		<string>D</string>
 		<string>E</string>
+		<string>Eacute</string>
+		<string>Ecircumflex</string>
+		<string>Edieresis</string>
+		<string>Egrave</string>
 		<string>F</string>
 		<string>G</string>
 		<string>H</string>
@@ -66,6 +78,27 @@
 		<string>z</string>
 		<string>space</string>
 		<string>greater</string>
+		<string>dieresiscomb.case</string>
+		<string>gravecomb.case</string>
+		<string>acutecomb.case</string>
+		<string>circumflexcomb.case</string>
+		<string>ringcomb.case</string>
+		<string>tildecomb.case</string>
+		<string>dieresis</string>
+		<string>grave</string>
+		<string>acute</string>
+		<string>circumflex</string>
+		<string>ring</string>
+		<string>tilde</string>
 	</array>
+	<key>public.postscriptNames</key>
+	<dict>
+		<key>circumflexcomb.case</key>
+		<string>uni0302.case</string>
+		<key>dieresiscomb.case</key>
+		<string>uni0308.case</string>
+		<key>ringcomb.case</key>
+		<string>uni030A.case</string>
+	</dict>
 </dict>
 </plist>
