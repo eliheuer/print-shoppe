@@ -3,7 +3,80 @@
 Fontbakery version: 0.8.4
 
 <details>
-<summary><b>[14] PrintShoppe.ttf</b></summary>
+<summary><b>[22] PrintShoppe.ttf</b></summary>
+<details>
+<summary>💔 <b>ERROR:</b> Check METADATA.pb includes production subsets.</summary>
+
+* [com.google.fonts/check/metadata/includes_production_subsets](https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/googlefonts.html#com.google.fonts/check/metadata/includes_production_subsets)
+<pre>--- Rationale ---
+Check METADATA.pb file includes the same subsets as the family in production.</pre>
+
+* 💔 **ERROR** The condition <FontBakeryCondition:production_metadata> had an error: JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+</details>
+<details>
+<summary>💔 <b>ERROR:</b> Version number has increased since previous release on Google Fonts?</summary>
+
+* [com.google.fonts/check/version_bump](https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/googlefonts.html#com.google.fonts/check/version_bump)
+
+* 💔 **ERROR** The condition <FontBakeryCondition:api_gfonts_ttFont> had an error: FailedConditionError: The condition <FontBakeryCondition:remote_styles> had an error: JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+</details>
+<details>
+<summary>💔 <b>ERROR:</b> Glyphs are similiar to Google Fonts version?</summary>
+
+* [com.google.fonts/check/production_glyphs_similarity](https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity)
+
+* 💔 **ERROR** The condition <FontBakeryCondition:api_gfonts_ttFont> had an error: FailedConditionError: The condition <FontBakeryCondition:remote_styles> had an error: JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+</details>
+<details>
+<summary>💔 <b>ERROR:</b> Check if the vertical metrics of a family are similar to the same family hosted on Google Fonts.</summary>
+
+* [com.google.fonts/check/vertical_metrics_regressions](https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/googlefonts.html#com.google.fonts/check/vertical_metrics_regressions)
+<pre>--- Rationale ---
+If the family already exists on Google Fonts, we need to ensure that the checked
+family&#x27;s vertical metrics are similar. This check will test the following schema
+which was outlined in Fontbakery issue #1162 [1]:
+- The family should visually have the same vertical metrics as the Regular style
+hosted on Google Fonts.
+- If the family on Google Fonts has differing hhea and typo metrics, the family
+being checked should use the typo metrics for both the hhea and typo entries.
+- If the family on Google Fonts has use typo metrics not enabled and the family
+being checked has it enabled, the hhea and typo metrics should use the family on
+Google Fonts winAscent and winDescent values.
+- If the upms differ, the values must be scaled so the visual appearance is the
+same.
+[1] https://github.com/googlefonts/fontbakery/issues/1162</pre>
+
+* 💔 **ERROR** The condition <FontBakeryCondition:regular_remote_style> had an error: FailedConditionError: The condition <FontBakeryCondition:remote_styles> had an error: JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+</details>
+<details>
+<summary>💔 <b>ERROR:</b> Check font follows the Google Fonts CJK vertical metric schema</summary>
+
+* [com.google.fonts/check/cjk_vertical_metrics](https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/googlefonts.html#com.google.fonts/check/cjk_vertical_metrics)
+<pre>--- Rationale ---
+CJK fonts have different vertical metrics when compared to Latin fonts. We
+follow the schema developed by dr Ken Lunde for Source Han Sans and the Noto CJK
+fonts.
+Our documentation includes further information:
+https://github.com/googlefonts/gf-docs/tree/main/Spec#cjk-vertical-metrics</pre>
+
+* 💔 **ERROR** The condition <FontBakeryCondition:remote_styles> had an error: JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+</details>
+<details>
+<summary>💔 <b>ERROR:</b> Check if the vertical metrics of a CJK family are similar to the same family hosted on Google Fonts.</summary>
+
+* [com.google.fonts/check/cjk_vertical_metrics_regressions](https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/googlefonts.html#com.google.fonts/check/cjk_vertical_metrics_regressions)
+<pre>--- Rationale ---
+Check CJK family has the same vertical metrics as the same family hosted on
+Google Fonts.</pre>
+
+* 💔 **ERROR** The condition <FontBakeryCondition:regular_remote_style> had an error: FailedConditionError: The condition <FontBakeryCondition:remote_styles> had an error: JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+</details>
 <details>
 <summary>🔥 <b>FAIL:</b> Checking file is named canonically.</summary>
 
@@ -47,7 +120,7 @@ No such DRM restrictions can be enabled on the Google Fonts collection, so the f
 Google Fonts expects that fonts in its collection support at least the minimal
 set of characters defined in the `GF-latin-core` glyph-set.</pre>
 
-* 🔥 **FAIL** Missing required codepoints: 0x0021 (EXCLAMATION MARK), 0x0022 (QUOTATION MARK), 0x0023 (NUMBER SIGN), 0x0024 (DOLLAR SIGN) and 156 more. [code: missing-codepoints]
+* 🔥 **FAIL** Missing required codepoints: 0x0021 (EXCLAMATION MARK), 0x0022 (QUOTATION MARK), 0x0023 (NUMBER SIGN), 0x0024 (DOLLAR SIGN) and 140 more. [code: missing-codepoints]
 
 </details>
 <details>
@@ -116,7 +189,7 @@ unacceptably broken when it is possible to avoid it.
 If users complain and prefer the old broken version, they have the freedom to
 take care of their own situation.</pre>
 
-* 🔥 **FAIL** OS/2 sTypoAscender (800) and hhea ascent (1000) must be equal. [code: ascender]
+* 🔥 **FAIL** OS/2 sTypoAscender (750) and hhea ascent (975) must be equal. [code: ascender]
 
 </details>
 <details>
@@ -202,98 +275,22 @@ data. This makes the solution much more portable and universal.</pre>
 
 </details>
 <details>
-<summary>⚠ <b>WARN:</b> Check if each glyph has the recommended amount of contours.</summary>
+<summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs</summary>
 
-* [com.google.fonts/check/contour_count](https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/universal.html#com.google.fonts/check/contour_count)
+* [com.google.fonts/check/unreachable_glyphs](https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs)
 <pre>--- Rationale ---
-Visually QAing thousands of glyphs by hand is tiring. Most glyphs can only be
-constructured in a handful of ways. This means a glyph&#x27;s contour count will only
-differ slightly amongst different fonts, e.g a &#x27;g&#x27; could either be 2 or 3
-contours, depending on whether its double story or single story.
-However, a quotedbl should have 2 contours, unless the font belongs to a display
-family.
-This check currently does not cover variable fonts because there&#x27;s plenty of
-alternative ways of constructing glyphs with multiple outlines for each feature
-in a VarFont. The expected contour count data for this check is currently
-optimized for the typical construction of glyphs in static fonts.</pre>
+Glyphs are either accessible directly through Unicode codepoints or through
+substitution rules. Any glyphs not accessible by either of these means are
+redundant and serve only to increase the font&#x27;s file size.</pre>
 
-* ⚠ **WARN** This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.
-
-The following glyphs do not have the recommended number of contours:
-
- - Glyph name: A	Contours detected: 0	Expected: 2
- - Glyph name: B	Contours detected: 0	Expected: 2 or 3
- - Glyph name: C	Contours detected: 0	Expected: 1
- - Glyph name: K	Contours detected: 0	Expected: 1 or 2
- - Glyph name: M	Contours detected: 0	Expected: 1
- - Glyph name: O	Contours detected: 0	Expected: 2
- - Glyph name: Q	Contours detected: 0	Expected: 2
- - Glyph name: S	Contours detected: 0	Expected: 1
- - Glyph name: V	Contours detected: 0	Expected: 1
- - Glyph name: W	Contours detected: 0	Expected: 1 or 2
- - Glyph name: a	Contours detected: 0	Expected: 2
- - Glyph name: b	Contours detected: 0	Expected: 2
- - Glyph name: c	Contours detected: 0	Expected: 1
- - Glyph name: d	Contours detected: 0	Expected: 2
- - Glyph name: e	Contours detected: 0	Expected: 2
- - Glyph name: f	Contours detected: 0	Expected: 1
- - Glyph name: g	Contours detected: 0	Expected: 2 or 3
- - Glyph name: h	Contours detected: 0	Expected: 1
- - Glyph name: i	Contours detected: 0	Expected: 2
- - Glyph name: j	Contours detected: 0	Expected: 2
- - Glyph name: k	Contours detected: 0	Expected: 1 or 2
- - Glyph name: l	Contours detected: 0	Expected: 1
- - Glyph name: m	Contours detected: 0	Expected: 1
- - Glyph name: n	Contours detected: 0	Expected: 1
- - Glyph name: o	Contours detected: 0	Expected: 2
- - Glyph name: p	Contours detected: 0	Expected: 2
- - Glyph name: q	Contours detected: 0	Expected: 2
- - Glyph name: r	Contours detected: 0	Expected: 1
- - Glyph name: s	Contours detected: 0	Expected: 1
- - Glyph name: t	Contours detected: 0	Expected: 1
- - Glyph name: u	Contours detected: 0	Expected: 1
- - Glyph name: v	Contours detected: 0	Expected: 1
- - Glyph name: w	Contours detected: 0	Expected: 1
- - Glyph name: x	Contours detected: 0	Expected: 1
- - Glyph name: y	Contours detected: 0	Expected: 1
- - Glyph name: z	Contours detected: 0	Expected: 1
- - Glyph name: A	Contours detected: 0	Expected: 2
- - Glyph name: B	Contours detected: 0	Expected: 2 or 3
- - Glyph name: C	Contours detected: 0	Expected: 1
- - Glyph name: K	Contours detected: 0	Expected: 1 or 2
- - Glyph name: M	Contours detected: 0	Expected: 1
- - Glyph name: O	Contours detected: 0	Expected: 2
- - Glyph name: Q	Contours detected: 0	Expected: 2
- - Glyph name: S	Contours detected: 0	Expected: 1
- - Glyph name: V	Contours detected: 0	Expected: 1
- - Glyph name: W	Contours detected: 0	Expected: 1 or 2
- - Glyph name: a	Contours detected: 0	Expected: 2
- - Glyph name: b	Contours detected: 0	Expected: 2
- - Glyph name: c	Contours detected: 0	Expected: 1
- - Glyph name: d	Contours detected: 0	Expected: 2
- - Glyph name: e	Contours detected: 0	Expected: 2
- - Glyph name: f	Contours detected: 0	Expected: 1
- - Glyph name: g	Contours detected: 0	Expected: 2 or 3
- - Glyph name: h	Contours detected: 0	Expected: 1
- - Glyph name: i	Contours detected: 0	Expected: 2
- - Glyph name: j	Contours detected: 0	Expected: 2
- - Glyph name: k	Contours detected: 0	Expected: 1 or 2
- - Glyph name: l	Contours detected: 0	Expected: 1
- - Glyph name: m	Contours detected: 0	Expected: 1
- - Glyph name: n	Contours detected: 0	Expected: 1
- - Glyph name: o	Contours detected: 0	Expected: 2
- - Glyph name: p	Contours detected: 0	Expected: 2
- - Glyph name: q	Contours detected: 0	Expected: 2
- - Glyph name: r	Contours detected: 0	Expected: 1
- - Glyph name: s	Contours detected: 0	Expected: 1
- - Glyph name: t	Contours detected: 0	Expected: 1
- - Glyph name: u	Contours detected: 0	Expected: 1
- - Glyph name: v	Contours detected: 0	Expected: 1
- - Glyph name: w	Contours detected: 0	Expected: 1
- - Glyph name: x	Contours detected: 0	Expected: 1
- - Glyph name: y	Contours detected: 0	Expected: 1 
- - Glyph name: z	Contours detected: 0	Expected: 1
- [code: contour-count]
+* ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
+ - gravecomb.case
+ - acutecomb.case
+ - uni030A.case
+ - uni0302.case
+ - uni0308.case 
+ - tildecomb.case
+ [code: unreachable-glyphs]
 
 </details>
 <details>
@@ -302,6 +299,19 @@ The following glyphs do not have the recommended number of contours:
 * [com.google.fonts/check/linegaps](https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps)
 
 * ⚠ **WARN** OS/2 sTypoLineGap is not equal to 0. [code: OS/2]
+
+</details>
+<details>
+<summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing.</summary>
+
+* [com.google.fonts/check/gdef_spacing_marks](https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks)
+<pre>--- Rationale ---
+Glyphs in the GDEF mark glyph class should be non-spacing.
+Spacing glyphs in the GDEF mark glyph class may have incorrect anchor
+positioning that was only intended for building composite glyphs during design.</pre>
+
+* ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+	 acutecomb.case (unencoded), gravecomb.case (unencoded), tildecomb.case (unencoded), uni0302.case (unencoded), uni0308.case (unencoded) and uni030A.case (unencoded) [code: spacing-mark-glyphs]
 
 </details>
 <details>
@@ -320,12 +330,16 @@ generate significant numbers of false positives, it will pass if there are more
 than 100 reported misalignments.</pre>
 
 * ⚠ **WARN** The following glyphs have on-curve points which have potentially incorrect y coordinates:
+	* A (U+0041): X=480.0,Y=-1.0 (should be at baseline 0?)
 	* G (U+0047): X=294.0,Y=-1.5 (should be at baseline 0?)
 	* H (U+0048): X=58.0,Y=-1.0 (should be at baseline 0?)
 	* I (U+0049): X=58.0,Y=-1.0 (should be at baseline 0?)
 	* J (U+004A): X=54.0,Y=-1.0 (should be at baseline 0?)
-	* X (U+0058): X=70.0,Y=-1.0 (should be at baseline 0?)
-	* X (U+0058): X=129.0,Y=-1.0 (should be at baseline 0?) and Y (U+0059): X=190.0,Y=-1.0 (should be at baseline 0?) [code: found-misalignments]
+	* K (U+004B): X=58.0,Y=-1.0 (should be at baseline 0?)
+	* K (U+004B): X=348.0,Y=-1.0 (should be at baseline 0?)
+	* M (U+004D): X=58.0,Y=-1.0 (should be at baseline 0?)
+	* S (U+0053): X=325.5,Y=701.5 (should be at cap-height 700?)
+	* X (U+0058): X=60.0,Y=-1.0 (should be at baseline 0?) and 50 more. [code: found-misalignments]
 
 </details>
 <details>
@@ -341,15 +355,37 @@ positives, it will pass if there are more than 100 reported short segments.</pre
 
 * ⚠ **WARN** The following glyphs have segments which seem very short:
 	* G (U+0047) contains a short segment B<<376.0,42.0>-<368.0,42.0>-<358.5,35.5>>
+	* M (U+004D) contains a short segment B<<305.0,464.0>-<313.0,464.0>-<319.5,470.5>>
+	* M (U+004D) contains a short segment B<<427.0,331.5>-<426.0,337.0>-<418.0,337.0>>
+	* M (U+004D) contains a short segment B<<418.0,337.0>-<409.0,337.0>-<403.0,324.0>>
+	* M (U+004D) contains a short segment B<<211.0,331.5>-<205.0,342.0>-<198.0,342.0>>
+	* M (U+004D) contains a short segment B<<198.0,342.0>-<192.0,342.0>-<187.5,336.0>>
 	* N (U+004E) contains a short segment B<<196.0,306.0>-<191.0,306.0>-<187.0,302.0>>
 	* N (U+004E) contains a short segment B<<187.0,302.0>-<183.0,298.0>-<183.0,286.0>>
-	* X (U+0058) contains a short segment B<<222.0,515.0>-<224.0,511.0>-<227.5,506.0>>
-	* X (U+0058) contains a short segment B<<227.5,506.0>-<231.0,501.0>-<236.0,501.0>>
-	* X (U+0058) contains a short segment B<<236.0,501.0>-<240.0,501.0>-<242.5,506.0>>
-	* X (U+0058) contains a short segment B<<242.5,506.0>-<245.0,511.0>-<246.0,516.0>>
-	* X (U+0058) contains a short segment B<<256.0,243.0>-<250.0,247.0>-<243.5,253.5>>
-	* X (U+0058) contains a short segment B<<243.5,253.5>-<237.0,260.0>-<231.0,259.0>>
-	* X (U+0058) contains a short segment B<<231.0,259.0>-<225.0,258.0>-<222.0,252.0>> and 7 more. [code: found-short-segments]
+	* Q (U+0051) contains a short segment B<<424.0,155.5>-<420.0,150.0>-<420.0,145.0>>
+	* W (U+0057) contains a short segment B<<165.0,0.0>-<146.0,0.0>-<137.5,9.0>> and 56 more. [code: found-short-segments]
+
+</details>
+<details>
+<summary>⚠ <b>WARN:</b> Do outlines contain any semi-vertical or semi-horizontal lines?</summary>
+
+* [com.google.fonts/check/outline_semi_vertical](https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_semi_vertical)
+<pre>--- Rationale ---
+This check detects line segments which are nearly, but not quite, exactly
+horizontal or vertical. Sometimes such lines are created by design, but often
+they are indicative of a design error.
+This check is disabled for italic styles, which often contain nearly-upright
+lines.</pre>
+
+* ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
+ * A (U+0041): L<<480.0,-1.0>--<363.0,0.0>>
+ * Aacute (U+00C1): L<<480.0,-1.0>--<363.0,0.0>>
+ * Acircumflex (U+00C2): L<<480.0,-1.0>--<363.0,0.0>>
+ * Adieresis (U+00C4): L<<480.0,-1.0>--<363.0,0.0>>
+ * Agrave (U+00C0): L<<480.0,-1.0>--<363.0,0.0>>
+ * Aring (U+00C5): L<<480.0,-1.0>--<363.0,0.0>>
+ * Atilde (U+00C3): L<<480.0,-1.0>--<363.0,0.0>>
+ * X (U+0058): L<<455.0,0.0>--<332.0,-1.0>> and x (U+0078): L<<365.0,0.0>--<242.0,-1.0>> [code: found-semi-vertical]
 
 </details>
 <br>
@@ -359,8 +395,8 @@ positives, it will pass if there are more than 100 reported short segments.</pre
 
 | 💔 ERROR | 🔥 FAIL | ⚠ WARN | 💤 SKIP | ℹ INFO | 🍞 PASS | 🔎 DEBUG |
 |:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
-| 0 | 7 | 7 | 122 | 7 | 77 | 0 |
-| 0% | 3% | 3% | 55% | 3% | 35% | 0% |
+| 6 | 7 | 9 | 113 | 7 | 78 | 0 |
+| 3% | 3% | 4% | 51% | 3% | 35% | 0% |
 
 **Note:** The following loglevels were omitted in this report:
 * **SKIP**
