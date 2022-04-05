@@ -284,11 +284,11 @@ substitution rules. Any glyphs not accessible by either of these means are
 redundant and serve only to increase the font&#x27;s file size.</pre>
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
- - gravecomb.case
- - acutecomb.case
+ - uni0308.case
  - uni030A.case
  - uni0302.case
- - uni0308.case 
+ - acutecomb.case
+ - gravecomb.case 
  - tildecomb.case
  [code: unreachable-glyphs]
 
@@ -311,7 +311,7 @@ Spacing glyphs in the GDEF mark glyph class may have incorrect anchor
 positioning that was only intended for building composite glyphs during design.</pre>
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 acutecomb.case (unencoded), gravecomb.case (unencoded), tildecomb.case (unencoded), uni0302.case (unencoded), uni0308.case (unencoded) and uni030A.case (unencoded) [code: spacing-mark-glyphs]
+	 gravecomb.case (unencoded), tildecomb.case (unencoded), uni0302.case (unencoded), uni0308.case (unencoded) and uni030A.case (unencoded) [code: spacing-mark-glyphs]
 
 </details>
 <details>
@@ -354,16 +354,16 @@ segments. As this check is liable to generate significant numbers of false
 positives, it will pass if there are more than 100 reported short segments.</pre>
 
 * ⚠ **WARN** The following glyphs have segments which seem very short:
+	* C (U+0043) contains a short segment B<<428.0,473.0>-<428.0,463.0>-<422.0,458.5>>
+	* C (U+0043) contains a short segment B<<422.0,458.5>-<416.0,454.0>-<408.0,453.0>>
 	* G (U+0047) contains a short segment B<<376.0,42.0>-<368.0,42.0>-<358.5,35.5>>
-	* M (U+004D) contains a short segment B<<305.0,464.0>-<313.0,464.0>-<319.5,470.5>>
-	* M (U+004D) contains a short segment B<<427.0,331.5>-<426.0,337.0>-<418.0,337.0>>
-	* M (U+004D) contains a short segment B<<418.0,337.0>-<409.0,337.0>-<403.0,324.0>>
-	* M (U+004D) contains a short segment B<<211.0,331.5>-<205.0,342.0>-<198.0,342.0>>
-	* M (U+004D) contains a short segment B<<198.0,342.0>-<192.0,342.0>-<187.5,336.0>>
-	* N (U+004E) contains a short segment B<<196.0,306.0>-<191.0,306.0>-<187.0,302.0>>
-	* N (U+004E) contains a short segment B<<187.0,302.0>-<183.0,298.0>-<183.0,286.0>>
-	* Q (U+0051) contains a short segment B<<424.0,155.5>-<420.0,150.0>-<420.0,145.0>>
-	* W (U+0057) contains a short segment B<<165.0,0.0>-<146.0,0.0>-<137.5,9.0>> and 56 more. [code: found-short-segments]
+	* K (U+004B) contains a short segment B<<183.0,459.0>-<183.0,448.0>-<191.0,448.0>>
+	* K (U+004B) contains a short segment B<<191.0,448.0>-<195.0,448.0>-<198.5,452.5>>
+	* K (U+004B) contains a short segment B<<458.0,695.5>-<463.0,691.0>-<463.0,679.0>>
+	* K (U+004B) contains a short segment B<<341.0,398.0>-<338.0,391.0>-<335.5,384.5>>
+	* K (U+004B) contains a short segment B<<335.5,384.5>-<333.0,378.0>-<333.0,372.0>>
+	* K (U+004B) contains a short segment B<<333.0,372.0>-<333.0,366.0>-<335.0,359.5>>
+	* K (U+004B) contains a short segment B<<335.0,359.5>-<337.0,353.0>-<339.0,348.0>> and 65 more. [code: found-short-segments]
 
 </details>
 <details>
